@@ -30,11 +30,10 @@ public class Principal {
                     
                     Menu
                     1 - Buscar livro por título
-                    2 - Buscar autor
-                    3 - Listar livros registrados
-                    4 - Listar autores
-                    5 - Listar autores vivos por ano
-                    6 - Listar livros por idioma
+                    2 - Listar livros registrados
+                    3 - Listar autores
+                    4 - Listar autores vivos por ano
+                    5 - Listar livros por idioma
                                         
                     0 - Sair
                     """);
@@ -49,7 +48,7 @@ public class Principal {
                     menuService.buscaPorTituloDoLivro();
                     break;
                 case 2:
-                    menuService.buscaPorAutor();
+
                     break;
                 case 0:
                     menu = false;
