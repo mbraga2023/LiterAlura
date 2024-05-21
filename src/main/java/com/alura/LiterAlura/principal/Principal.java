@@ -24,14 +24,25 @@ public class Principal {
         Scanner scanner = new Scanner(System.in);
 
         while (menu) {
-            System.out.println("Menu:");
-            System.out.println("1. Search book");
-            System.out.println("2. Search author");
-            System.out.println("3. Exit");
-            System.out.print("Enter your choice: ");
+
+            System.out.println("""
+                    **** LiterAlura ****
+                    
+                    Menu
+                    1 - Buscar livro por título
+                    2 - Buscar autor
+                    3 - Listar livros registrados
+                    4 - Listar autores
+                    5 - Listar autores vivos por ano
+                    6 - Listar livros por idioma
+                                        
+                    0 - Sair
+                    """);
+
+            System.out.print("Digite sua opção: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -40,11 +51,11 @@ public class Principal {
                 case 2:
                     menuService.buscaPorAutor();
                     break;
-                case 3:
+                case 0:
                     menu = false;
                     break;
                 default:
-                    System.out.println("Invalid choice. Please enter again.");
+                    System.out.println("Escolha inválida. Tente novamente");
             }
         }
     }
