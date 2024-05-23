@@ -34,6 +34,7 @@ public class Principal {
                     3 - Listar autores
                     4 - Listar autores vivos por ano
                     5 - Listar livros por idioma
+                    6 - Top 10 livros (mais baixados)
                                         
                     0 - Sair
                     """);
@@ -48,7 +49,19 @@ public class Principal {
                     menuService.buscaPorTituloDoLivro();
                     break;
                 case 2:
-
+                    menuService.listarLivros();
+                    break;
+                case 3:
+                    menuService.listarAutores();
+                    break;
+                case 4:
+                    menuService.listarAutoresVivosPorData();
+                    break;
+                case 5:
+                    menuService.listarLivrosPorIdioma();
+                    break;
+                case 6:
+                    menuService.top10downloads();
                     break;
                 case 0:
                     menu = false;

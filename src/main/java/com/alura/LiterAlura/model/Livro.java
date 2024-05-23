@@ -12,7 +12,7 @@ public class Livro {
     private Long id;
     private String title;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "livro_autor",
             joinColumns = @JoinColumn(name = "livro_id"),
@@ -20,7 +20,7 @@ public class Livro {
     )
     private List<Autor> autores = new ArrayList<>();
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private List<String> languages;
 
     private int download_count;
@@ -67,4 +67,29 @@ public class Livro {
     public void setDownload_count(int download_count) {
         this.download_count = download_count;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("")
+                .append("id:").append(id)
+                .append(", Título: ").append(title);
+
+        // Print details of each Autor
+        sb.append(", Autores: ");
+        for (Autor autor : autores) {
+            sb.append("").append(autor.getName())
+                    .append(" - Nascimento: ").append(autor.getBirthYear())
+                    .append(", Falecimento: ").append(autor.getDeathYear())
+                    .append("; ");
+        }
+        sb.append("");
+
+        // Print languages and download count
+        sb.append("Idiomas:").append(languages)
+                .append(", Nº downloads:").append(download_count);
+
+        return sb.toString();
+    }
+
 }

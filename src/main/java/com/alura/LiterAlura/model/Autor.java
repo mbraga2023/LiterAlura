@@ -62,4 +62,13 @@ public class Autor {
     public void setLivros(List<Livro> livros) {
         this.livros = livros;
     }
+
+    @Override
+    public String toString() {
+        return "id: " + id +
+                " - " + name +
+                " . " +
+                " Ano nascimento: " + birthYear +
+                ", Ano Falecimento: " + deathYear;
+    }
 }
