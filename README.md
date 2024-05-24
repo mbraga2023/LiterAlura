@@ -38,7 +38,7 @@ O LiterAlura CLI é executado na linha de comando ou no IDE. Basta executar o pr
 Contribuições para o LiterAlura CLI são bem-vindas! Se você tiver alguma sugestão, relatório de bug ou solicitação de recurso, abra um problema no GitHub ou envie uma solicitação de pull.
 
 ## Licença:
-Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para obter detalhes.
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo ([LICENSE](https://github.com/mbraga2023/LiterAlura/blob/master/LICENSE)) para obter detalhes.
 
 ## Contato:
 Para quaisquer dúvidas ou suporte relacionados ao LiterAlura CLI, entre em contato com o desenvolvedor, Michel Braga, por e-mail em [michel.diener@gmail.com](mailto:michel.diener@gmail.com).
